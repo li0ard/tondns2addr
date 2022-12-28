@@ -20,5 +20,5 @@ class DNSToAddr(DiscoverableTransform):
 				else:
 					a = response.addEntity("maltego.CryptocurrencyAddress", walletInfo["address"]["raw"])
 				a.setIconURL("https://ton.org/download/ton_symbol.png")
-		except socket.error as e:
-			response.addUIMessage(f"Error: {e}", UIM_TYPES["partial"])
+		except:
+			response.addUIMessage(f"Error", UIM_TYPES["partial"])
